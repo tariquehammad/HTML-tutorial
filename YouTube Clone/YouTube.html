@@ -11,9 +11,17 @@
   <link rel="stylesheet" href="styles/header.css" />
   <link rel="stylesheet" href="styles/general.css" />
   <link rel="stylesheet" href="styles/sidebar.css" />
+  <link rel="stylesheet" href="styles/loading.css" />
 </head>
 
 <body>
+  <div class="loading-page">
+    <div id="loader">
+      <div id="box"></div>
+      <div id="hill"></div>
+    </div>
+  </div>
+
   <header class="header">
     <div class="left-section">
       <img src="icons/hamburger-menu.svg" alt="" class="hamburger-menu" />
@@ -399,4 +407,12 @@
       </div>
     </div>
   </main>
+  <script>
+    setTimeout(()=> {
+      const loading = document.getElementById('loader')
+      loading.style.display = "none";
+      const wallpaper = document.querySelector('.loading-page')
+      wallpaper.style.display = "none";
+    },2000);
+  </script>
 </body>
